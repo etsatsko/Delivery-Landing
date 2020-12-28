@@ -1,16 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/script.min.js" async></script>
-    <title>UXEXPRESS</title>
+	<title>Uxepress</title>
+	<link rel="stylesheet" href="../styles/reset.css">
+	<link rel="stylesheet" href="../styles/style.css">
+	<script src="../scripts/script.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 </head>
 <body>
-    @@include('_header.html')
-    @@include('_main_area.html')
-    @@include('_footer.html')
-    @@include('_modal_window.html')
+	<header class="header">
+		<div class="header__container">
+		    <div class="header__logo">
+		    	<a href="#" class="header__logo__img">
+				<img src="../img/logo.png" alt="logo" srcset="../img/logo@2x.png 2x"/>
+				</a>
+				<div class="header__logo__slogan">
+					<span>Курьерская служба доставки</span>
+				</div>
+		    </div> 
+			<div class="header__authorization">
+				<div class ="header__phone">
+					<img src="../img/phone.png" alt="phone" srcset="../img/phone@2x.png 2x"/>
+					<span class="header_phone_number">8 (909) 023-12-51</span>
+				</div>
+				<button class="header__button" id="header_btn" type="button" >Вход</button>
+			</div>
+		</div>
+		<div class="header__content">
+			<div class="header__wrapper">
+				
+			</div>
+			<div class="slides" id="slide1">
+				<div class="header__text">
+					<h1 class="header__title">Срочная доставка день в день</h1>
+					<div>
+						<p class="header__discription">Для тех, кто не может ждать у нас есть услуга срочной курьерской доставки корреспондеции и других видов отправлений.</p>
+					</div>
+					<button type="button" onclick="">Заказать доставку</button>
+				</div>
+				<div class="header__img">
+					<img src="../img/slide1.png" alt="car" srcset="../img/slide1@2x.png 2x"/>
+				</div>
+			</div>
+			<div class="slides" id="slide2">
+				<div class="header__text">
+					<h1 class="header__title">Подписание договора за 1 час</h1>
+					<div>
+						<p class="header__discription">В течение часа наш курьер заберет вашу посылку и подпишет с Вами договор о предоставлении услуг.</p>
+					</div>
+					<button type="button">Заказать доставку</button>
+				</div>
+				<div class="header__img">
+					<img src="../img/slide2.png" alt="list" srcset="../img/slide2@2x.png 2x"/>
+				</div>
+			</div>
+			<div class="control">
+			    <span class="dot active" onclick="currentSlide(1)"></span> 
+			    <span class="dot" onclick="currentSlide(2)"></span>
+			</div>
+		</div>
+	</header>
+
+	<section class="section-steps">
+		<div class="section-steps__container">
+			<div class="section-steps__title">
+				5 шагов к заявке
+			</div>
+			<div class="section-steps__blocks">
+				<div class="blocks">
+					<img src="../img/block1.png" alt="icon" srcset="../img/block1@2x.png 2x"/>
+					<div class="blocks__title">Расчетать стоимость</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+				</div>
+				<div class="blocks">
+					<img src="../img/block2.png" alt="icon" srcset="../img/block2@2x.png 2x"/>
+					<div class="blocks__title">Вызвать курьера</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+				</div>
+				<div class="blocks">
+					<img src="../img/block3.png" alt="icon" srcset="../img/block3@2x.png 2x"/>
+					<div class="blocks__title">Оплатить услуги</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+				</div>
+				<div class="blocks">
+					<img src="../img/block4.png" alt="icon" srcset="../img/block4@2x.png 2x"/>
+					<div class="blocks__title">Заключить договор</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+				</div>
+				<div class="blocks">
+					<img src="../img/block5.png" alt="icon" srcset="../img/block5@2x.png 2x"/>
+					<div class="blocks__title">Предоставить данные</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+				</div>
+			</div>
+		</div>	
+	</section>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__logo">
+				<img src="../img/logo.png" alt="logo" srcset="../img/logo@2x.png 2x"/>
+			</div>
+			<ul class="ul__left">
+				<li><a class="one" href="#">О компании</a></li>
+				<li><a href="#">Вакансии</a></li>
+				<li><a href="#">Клиенту</a></li>
+				<li><a href="#">Франчайзинг</a></li>
+			</ul>
+			<ul class="ul__right">
+				<li><a href="#">Доставка из Китая</a></li>
+				<li><a href="#">Все услуги</a></li>
+				<li><a href="#">Акции</a></li>
+			</ul>
+			<div class="footer__address">
+				<p>manager@uexpress.ru</p>
+				<p>115221, г. Челябинск, ул. Северная, д. 29-в</p>
+				<p>Мы работаем по 24 часа 5 дней в неделю</p>
+			</div>
+		</div>
+	</footer>
+	<section class="modal__window">
+	    <div class="modal__wrap">
+	        <button class="modal__close" id="close_btn"></button>
+	        <div class="modal__container">
+	            <h2 class="modal__title">Авторизация</h2>
+	            <p class="modal__text">Введите логин и пароль, чтобы войти в личный кабинет</p>
+	            <form action="admin.html" class="modal__form">
+	                <input type="text" class="form__input" placeholder="Логин" id="modal-input-login">
+	                <div class="form__input-error" id="input-error-login"></div>
+	                <input type="password" class="form__input" placeholder="Пароль" id="modal-input-password">
+	                <div class="form__input-error" id="input-error-password"></div>
+	                <button class="form__btn-submit" type="submit" id="modal-submit-button">Войти</button>
+	            </form>
+	        </div>
+	    </div>
+	</section>
 </body>
 </html>
