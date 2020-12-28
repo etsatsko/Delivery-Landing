@@ -118,15 +118,15 @@ body{
  }
 
 .slides{
-	position: absolute;
-	left: 0;
-	top: 0;
 	width: 1170px;
 	margin-top: 27px;
 	position: relative;
-	transform: all easy 5s;
+	transform: all easy 1s;
 }
 
+#slide2{
+	display: none;
+}
 
 .header__title{
 	font-size: 64px;
@@ -178,8 +178,8 @@ body{
 
 .control{
 	position: absolute;
-	top: 593px;
-	left: 567px;
+	bottom: 20px;
+    left: 721px;
 }
 
 .dot{
